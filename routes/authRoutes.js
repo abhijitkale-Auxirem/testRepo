@@ -6,7 +6,8 @@ const router =
 
 const {
     signupUser,
-    getUserProfile
+    getUserProfile,
+    signupAdmin
 } = require(
     "../controllers/authController"
 );
@@ -16,6 +17,11 @@ const authMiddleware = require("../middleware/authMiddleware");
 router.post(
     "/signup",
     signupUser
+);
+
+router.post(
+    "/signup-admin",
+    signupAdmin
 );
 
 router.get(
